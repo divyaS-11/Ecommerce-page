@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow:
+    rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.navlinks {
+  display: flex;
+  font-size: 20px;
+  column-gap: 20px;
+}
+.navlinks a {
+  color: rgb(89, 89, 112);
+  text-decoration: none;
+}
+.navlinks a:hover {
+  text-decoration: underline;
+}
+.navmenu {
+  display: none;
+}
+
+/* side navbar */
+.sidenavbar {
+  background-color: rgb(89, 89, 112);
+  color: white;
+  width: 60%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%; /* IMPORTANT */
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 1000; /* IMPORTANT */
+}
+.sidenavlink {
+  margin-bottom: 30px;
+}
+.sidenavlink a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.sidenavlink a:hover {
+  text-decoration: underline;
+  color: white;
+  font-size: 20px;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  margin: 20px;
+}
+.parabold {
+  font-size: 20px;
+}
+.headerbtn {
+  background-color: rgb(89, 89, 112);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* service */
+.service {
+  padding: 20px;
+}
+.servicecontainer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.servicecontainer2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.servicecontainer2 div {
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 10px;
+  width: fit-content;
+}
+
+/* new arrival */
+.NewArrival {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.newarrival {
+  position: relative;
+  flex-basis: 20px;
+}
+.newarrival button {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin: 10px;
+  color: antiquewhite;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 18%;
+}
+
+/* new */
+.news {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+.news p {
+  font-size: 20px;
+}
+.search {
+  width: 70%;
+  height: 30px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.news button {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.footer {
+  margin-top: 20px;
+  background-color: lightgrey;
+  color: black;
+  padding: 40px;
+}
+
+/* collection product */
+.productsection {
+  margin-top: 30px;
+}
+.productsearch {
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: solid black;
+}
+.productsearch input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+.productsearch input:focus {
+  outline: none;
+}
+.products {
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.productbox {
+  text-align: center;
+  flex-basis: 20%;
+  border-radius: 5px;
+}
+
+/* contact us section */
+.contact-us {
+  background-color: gray;
+  color: white;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 5px;
+}
+.contact-us h1 {
+  margin-top: 20px;
+}
+.contact-us label {
+  display: block;
+  margin: 8px;
+  font-size: 18px;
+}
+.contact-us input,
+textarea {
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+textarea {
+  height: 120px;
+  resize: none;
+}
+.message {
+  padding: 20px;
+}
+
+/* \\ media query */
+@media screen and (max-width: 600px) {
+  .navmenu {
+    display: block;
+  }
+  .navlinks {
+    display: none;
+  }
+  .headerimg {
+    display: none;
+  }
+  .servicecontainer1 {
+    display: none;
+  }
+  .servicecontainer2 {
+    flex-direction: column;
+  }
+}
